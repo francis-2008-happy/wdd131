@@ -20,7 +20,7 @@ header {
 header h1{    
     font-family: 'Dancing Script', cursive;
     font-style: italic; 
-    font-size: 80px;
+    font-size: 50px;
     color: white;
 
 }
@@ -62,7 +62,7 @@ main h2{
     color:black;
     text-align: center;
     padding: 20px;
-    font-size: 100px;
+    font-size: 70px;
     font-family: 'Dancing Script', cursive;
 }
 .gallery{
