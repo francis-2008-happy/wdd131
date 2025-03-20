@@ -1,0 +1,133 @@
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    height: 110px;
+}
+
+header h1{    
+    font-family: 'Dancing Script', cursive;
+    font-style: italic; 
+    font-size: 80px;
+    color: white;
+
+}
+
+/* Hamburger Button Styling */
+#hamburger-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; 
+}
+
+/* Navigation Styling */
+#main-nav {
+    display: flex;
+    gap: 50px;
+}
+
+#main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+#main-nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    background-color:antiquewhite;
+    max-width: 1400px;
+    margin: 0 auto;
+
+}
+
+main h2{
+    color:black;
+    text-align: center;
+    padding: 20px;
+    font-size: 100px;
+    font-family: 'Dancing Script', cursive;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery img{
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery figcaption{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+    font-style: bold;
+}
+ footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design: Hide nav and show hamburger button on small screens */
+@media (max-width: 768px) {
+    #hamburger-btn {
+        display: block; /* Show hamburger button */
+    }
+
+    #main-nav {
+        display: none; /* Hide nav by default on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    #main-nav.active {
+        display: flex; /* Show nav when active */
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
+}
