@@ -83,7 +83,7 @@ main h2{
     text-align: center;
     font-size: 30px;
     font-family: 'Dancing Script', cursive;
-    font-style: bold;
+    font-weight: bold
 }
  footer {
     background-color: #333;
