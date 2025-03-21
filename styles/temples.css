@@ -128,7 +128,6 @@ main h2{
 
 @media (max-width: 600px) {
     .gallery {
-            flex-direction: column; /* Stack items vertically on small screens */
-        /* grid-template-columns: 1fr; Single column for mobile */
+        grid-template-columns: 1fr; /* Single column for mobile */
     }
 }
