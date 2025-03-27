@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Nigeria | WDD 131</title>
+    <meta name="description" content="Discover the beauty and culture of [Country Name] through this informational page">
+    <meta name="author" content="Your Name">
+    <link rel="stylesheet" href="styles/place_small.css">
+    <link rel="stylesheet" href="styles/place_large.css" >
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1> Nigeria</h1>
+    </header>
+
+    <main>
+        <div class = "green"> </div>
+        <section class="hero">
+            <picture>
+                <source media="(max-width: 767px)" srcset="images/nigeria_small.webp">
+                <source media="(min-width: 768px)" srcset="images/nigeria_big.webp">
+                <img src="images/nigeria_big.webp" alt="Scenic view of Nigeria" loading="lazy">
+            </picture>
+        </section>
+
+        <section class="info-grid">
+            <div class="card country-info">
+                <h2>About [Country Name]</h2>
+                <p>[Brief description of the country - history, geography, population, etc.]</p>
+            </div>
+
+            <div class="card landmarks">
+                <h2>Famous Landmarks</h2>
+                <p>[Description of notable landmarks or attractions]</p>
+            </div>
+
+            <div class="card weather">
+                <h2>Weather</h2>
+                <div class="weather-content">
+                    <div class="weather-icon">
+                        <img src="images/weather-icon.svg" alt="Weather icon" loading="lazy">
+                    </div>
+                    <div class="weather-data">
+                        <p>Current Temp: <span id="temp">25</span>°C</p>
+                        <p>Wind Speed: <span id="wind-speed">10</span> km/h</p>
+                        <p>Wind Chill: <span id="wind-chill">N/A</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="current-year"></span> | Francis Happy | WDD 131</p>
+        <p id="last-modified">Last Modified: </p>
+    </footer>
+</body>
+</html>

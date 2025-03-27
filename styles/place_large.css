@@ -1,0 +1,26 @@
+.info-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.weather::after {
+    content: "⛅";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.weather {
+    position: relative;
+    grid-column: span 2;
+}
+
+@media (min-width: 1024px) {
+    .info-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .weather {
+        grid-column: span 1;
+    }
+}
