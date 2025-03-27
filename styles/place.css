@@ -1,0 +1,119 @@
+:root {
+    --primary-red: #FC0D1B;
+    --primary-green: #00A65A;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--primary-green);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+header h1{
+    font-family: 'Dancing Script', cursive;
+    font-style: italic; 
+    font-size: 70px;
+}
+
+main {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding:10px;
+}
+
+.hero {
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.data, .weather {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.data {
+    top: 50px;
+    left: 50px;
+    width: 400px;
+}
+
+.weather {
+    bottom: 70px;
+    right: 50px;
+    width: 400px;
+}
+
+.weather h2{
+    background-color:var(--primary-green);
+    color:white;
+}
+.data ul {
+    list-style-type: none;
+}
+
+.data li, .weather-details p {
+    margin-bottom: 0.5rem;
+}
+.data h2{
+    background-color:var(--primary-green);
+    color:white;
+}
+
+footer {
+    background-color: var(--primary-green);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .data, .weather {
+        position: static;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .weather h2 {
+        display: flex;
+        align-items: center;
+    }
+
+    .weather h2::before {
+        content: url("../images/weather-icon.svg");
+        width: 24px;
+        height: 24px;
+        margin-right: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .weather::before {
+        content: "⛅";
+        font-size: 2rem;
+        margin-right: 0.5rem;
+    }
+}

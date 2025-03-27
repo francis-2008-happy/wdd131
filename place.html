@@ -3,58 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Nigeria | WDD 131</title>
-    <meta name="description" content="Discover the beauty and culture of [Country Name] through this informational page">
-    <meta name="author" content="Your Name">
-    <link rel="stylesheet" href="styles/place_small.css">
-    <link rel="stylesheet" href="styles/place_large.css" >
+    <title> Nigeria Country Page WDD 131 </title>
+    <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 </head>
 <body>
     <header>
-        <h1> Nigeria</h1>
+        <h1> Nigeria </h1>
     </header>
 
     <main>
-        <div class = "green"> </div>
-        <section class="hero">
-            <picture>
-                <source media="(max-width: 767px)" srcset="images/nigeria_small.webp">
-                <source media="(min-width: 768px)" srcset="images/nigeria_big.webp">
-                <img src="images/nigeria_big.webp" alt="Scenic view of Nigeria" loading="lazy">
-            </picture>
+        <picture class="hero">
+            <source media="(max-width: 600px)" srcset="images/nigeria_small.webp">
+            <source media="(min-width: 601px)" srcset="images/nigeria_big.webp">
+            <img src="images/nigeria_big.webp" alt="Lemurs in Madagascar" loading="lazy">
+        </picture>
+
+        <section class="data">
+            <h2>Data</h2>
+            <ul>
+                <li>Area: 587,041 sq km</li>
+                <li>Population: 251 Trillion </li>
+                <li>Capital: Abuja </li>
+                <li>Languages: English (Official) </li>
+                <li>Currency: Naira </li>
+                <li>Time Zone: WAT </li>
+                <li>Calling Code: +234</li>
+                <li>Internet TLD: .ng</li>
+            </ul>
         </section>
 
-        <section class="info-grid">
-            <div class="card country-info">
-                <h2>About [Country Name]</h2>
-                <p>[Brief description of the country - history, geography, population, etc.]</p>
-            </div>
-
-            <div class="card landmarks">
-                <h2>Famous Landmarks</h2>
-                <p>[Description of notable landmarks or attractions]</p>
-            </div>
-
-            <div class="card weather">
-                <h2>Weather</h2>
-                <div class="weather-content">
-                    <div class="weather-icon">
-                        <img src="images/weather-icon.svg" alt="Weather icon" loading="lazy">
-                    </div>
-                    <div class="weather-data">
-                        <p>Current Temp: <span id="temp">25</span>°C</p>
-                        <p>Wind Speed: <span id="wind-speed">10</span> km/h</p>
-                        <p>Wind Chill: <span id="wind-chill">N/A</span></p>
-                    </div>
-                </div>
+        <section class="weather">
+            <h2>Weather ⛅</h2>
+            <div class="weather-details">
+                <p>Temperature: 10 °C</p>
+                <p>Conditions: Partly Cloudy</p>
+                <p>Wind: 5 km/h</p>
+                <p>Wind Chill: <span id="windChill">N/A</span></p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy;<span id="current-year"></span> | Francis Happy | WDD 131</p>
-        <p id="last-modified">Last Modified: </p>
+        <p>©<span id="currentYear"></span> Francis Happy  • Nigeria </p>
+        <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 </body>
 </html>

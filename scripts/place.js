@@ -1,34 +1,28 @@
-// Get current year for footer
-const currentYear = new Date().getFullYear();
-document.getElementById('current-year').textContent = currentYear;
+// Set current year in footer
+document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-// Get last modified date
-const lastModified = document.lastModified;
-document.getElementById('last-modified').textContent += lastModified;
+// Set last modified date in footer
+document.getElementById('lastModified').textContent = document.lastModified;
 
-// Windchill calculation
-function calculateWindChill(temp, windSpeed) {
-    // Metric formula: 13.12 + 0.6215T - 11.37(V^0.16) + 0.3965T(V^0.16)
-    return (13.12 + 0.6215 * temp - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temp * Math.pow(windSpeed, 0.16)).toFixed(1);
+// Wind Chill Calculation Function
+function calculateWindChill(temperature, windSpeed) {
+    return 13.12 + (0.6215 * temperature) - (11.37 * Math.pow(windSpeed, 0.16)) + (0.3965 * temperature * Math.pow(windSpeed, 0.16));
 }
 
-// Display windchill if conditions are met
-const tempElement = document.getElementById('temp');
-const windSpeedElement = document.getElementById('wind-speed');
-const windChillElement = document.getElementById('wind-chill');
+// Wind Chill Display Function
+function displayWindChill() {
+    const temperature = 10;  // °C
+    const windSpeed = 5;     // km/h
 
-const temp = parseFloat(tempElement.textContent);
-const windSpeed = parseFloat(windSpeedElement.textContent);
+    const windChillElement = document.getElementById('windChill');
 
-if (temp <= 10 && windSpeed > 4.8) {
-    const windChill = calculateWindChill(temp, windSpeed);
-    windChillElement.textContent = `${windChill}°C`;
+    if (temperature <= 10 && windSpeed > 4.8) {
+        const windChill = calculateWindChill(temperature, windSpeed).toFixed(1);
+        windChillElement.textContent = `${windChill} °C`;
+    } else {
+        windChillElement.textContent = 'N/A';
+    }
 }
 
-// Mobile menu functionality
-const menuButton = document.getElementById('menu-button');
-const navList = document.querySelector('nav ul');
-
-menuButton.addEventListener('click', () => {
-    navList.style.display = navList.style.display === 'flex' ? 'none' : 'flex';
-});
+// Call wind chill display when page loads
+displayWindChill();
