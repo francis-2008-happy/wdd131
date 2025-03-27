@@ -92,7 +92,9 @@ footer {
 
 @media screen and (max-width: 600px) {
     .data, .weather {
-        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         margin: 1rem 0;
     }
@@ -103,7 +105,7 @@ footer {
     }
 
     .weather h2::before {
-        content: url("../images/weather-icon.svg");
+        /* content: url("../images/weather-icon.svg"); */
         width: 24px;
         height: 24px;
         margin-right: 0.5rem;
