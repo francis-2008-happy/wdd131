@@ -67,12 +67,21 @@ main {
     width: 400px;
 }
 
-.weather h2{
-    background-color:var(--primary-green);
-    color:white;
+.w_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    background-color: var(--primary-green);
 }
 
-.weather h2 img{
+.w_title h2{
+    /* background-color:var(--primary-green); */
+    color:white;
+    padding: 20px;
+}
+
+.w_title img{
     width: 50px;
     height: 50px;
 }
@@ -87,6 +96,7 @@ main {
 .data h2{
     background-color:var(--primary-green);
     color:white;
+
 }
 
 footer {
@@ -158,11 +168,16 @@ footer {
         height: 24px;
         margin-right: 0.5rem;
     }
+    .w_title {
+        display: flex;
+        flex-direction: column;
+
+    }
 }
 
 @media screen and (min-width: 601px) {
-    .weather::before {
-        /* content: "⛅"; */
+    .weather::after {
+        content: "⛅";
         font-size: 2rem;
         margin-right: 0.5rem;
     }
