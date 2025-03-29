@@ -163,7 +163,7 @@ footer {
     }
 
     .weather h2::before {
-        content: "⛅"; /* Fallback to emoji */
+        /* content: "⛅";  */
         width: 24px;
         height: 24px;
         margin-right: 0.5rem;
