@@ -137,8 +137,8 @@ const temples = [
       card.className = 'temple-card';
       
       card.innerHTML = `
-        <figure>
-          <img src="${temple.imageUrl}" alt="${temple.Name}" loading="lazy">
+        <figure class="temple-figure">
+          
           <figcaption>${temple.Name}</figcaption>
         </figure>
         <div class="temple-info">
@@ -146,6 +146,7 @@ const temples = [
           <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
           <p><strong>Size:</strong> ${temple.area.toLocaleString()} sq ft</p>
         </div>
+        <img src="${temple.imageUrl}" alt="${temple.Name}" loading="lazy">
       `;
       
       container.appendChild(card);
