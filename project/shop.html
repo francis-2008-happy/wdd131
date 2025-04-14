@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - Tricia's Hairline</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="images/tricia-logo.jpg" alt="Tricia's Hairline Logo" class="logo-img">
+      <a href="index.html" class="logo">TRICIA'S HAIRLINE</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html" class="active">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="shop-header">
+      <div class="collection">
+        <h1>Our Hair Collection</h1>
+        <p>Premium quality human hair for every style</p>
+      </div>
+    </section>
+
+    <section class="shop-filters">
+      <div class="filters">
+        <div class="filter-sidebar">
+          <h3>Filters</h3>
+          <div class="filter-group">
+            <h4>Hair Type</h4>
+            <select id="hair-type">
+              <option value="all">All Types</option>
+              <option value="wig">Wigs</option>
+              <option value="frontal">Frontals</option>
+              <option value="bundle">Bundles</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <h4>Length</h4>
+            <select id="hair-length">
+              <option value="all">All Lengths</option>
+              <option value="20">20"</option>
+              <option value="22">22"</option>
+              <option value="24">24"</option>
+              <option value="26">26"</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <h4>Price Range</h4>
+            <select id="price-range">
+              <option value="all">All Prices</option>
+              <option value="20000">Under ₦20,000</option>
+              <option value="40000">Under ₦40,000</option>
+              <option value="80000">Under ₦80,000</option>
+            </select>
+          </div>
+        </div>
+        <div class="shop-products">
+          <div class="product-grid" id="all-products">
+            <!-- Products loaded via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="hairline">
+      <p> &copy; <span id="copyright-year"> </span> Tricia's Hairline  - Ibadan Oyo State Nigeria. <br>last modified: 
+        <span id="last-modified"> </span> </p>
+      <div class="social-icons">
+        <a href="#"><img src="images/instagram.jpeg" alt="Instagram"></a>
+        <a href="#"><img src="images/email.jpeg" alt="Email"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/cart.js"></script>
+  <script src="scripts/shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Tricia's Hairline</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+ 
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="images/tricia-logo.jpg" alt="Tricia's Hairline Logo" class="logo-img">
+      <a href="index.html" class="logo">TRICIA'S HAIRLINE</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="#" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-header">
+      <div class="container">
+        <h1>Book a Consultation</h1>
+        <p>Get personalized advice for your hair needs</p>
+      </div>
+    </section>
+
+    <section class="contact-content">
+      <div class="container">
+        <div class="contact-form">
+          <h2>Contact Us</h2>
+          <form id="consultation-form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="consultation">Hair Consultation</option>
+                <option value="custom">Custom Wig Order</option>
+                <option value="frontal">Lace Frontal Installation</option>
+                <option value="other">Other Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <h2>Our Information</h2>
+          <p><strong>Email:</strong> info@triciashairline.com</p>
+          <p><strong>Phone:</strong> (555) 123-4567</p>
+          <p><strong>Hours:</strong> Monday-Friday, 9am-5pm EST</p>
+          <div class="social-links">
+            <a href="#" class="social-icon"><img src="images/instagram.svg" alt="Instagram"></a>
+            <a href="#" class="social-icon"><img src="images/facebook.svg" alt="Facebook"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="hairline">
+      <p> &copy; <span id="copyright-year"> </span> Tricia's Hairline  - Ibadan Oyo State Nigeria. <br>last modified: 
+        <span id="last-modified"> </span> </p>
+      <div class="social-icons">
+        <a href="#"><img src="images/instagram.jpeg" alt="Instagram"></a>
+        <a href="#"><img src="images/email.jpeg" alt="Email"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/cart.js"></script>
+  <script src="scripts/contact.js"></script>
+</body>
+</html>

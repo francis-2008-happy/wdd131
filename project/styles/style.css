@@ -1,0 +1,423 @@
+/* Base Styles */
+:root {
+    --primary-brown: #8b5a2b;
+    --primary-black: #000000;
+    --primary-purple: #f0d6eb;
+    --white: #ffffff;
+  }
+
+    /* width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; */
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--primary-black);
+    background-color: var(--primary-purple);
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-brown);
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .container img{
+    width: 100px;     
+    height: 100px; 
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+  }
+ .premium{
+
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+ }
+ .clients{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; 
+
+ }
+
+ .sellers{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; 
+
+ }
+
+ .hairline{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; 
+
+ }
+
+ .filters{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; 
+
+ }
+
+
+ .collection{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+
+ }
+
+ .collection h1{
+  font-size: 50px;
+  font-weight:700;
+ }
+
+ .haircare{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; 
+
+ }
+ .haircare h1{
+  font-size: 50px;
+  font-weight:700;
+  text-align: center;
+
+ }
+
+ .haircare p{
+  font-size: 20px;
+  font-weight:700;
+  text-align: center;
+  background-color: #ffffff;
+
+ }
+
+
+
+
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 70px;
+    font-weight: 700;
+    color: var(--primary-brown);
+    text-decoration: none;
+  }
+  
+  nav ul {
+    display: flex;
+    align-items: left;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: var(--primary-black);
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: var(--primary-brown);
+  }
+  
+  .mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/wig-main.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .hero h1 {
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: var(--primary-black);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: var(--primary-brown);
+  }
+  
+  /* Product Grid */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .product-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .product-info {
+    padding: 20px;
+  }
+  
+  .product-title {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .product-price {
+    font-weight: 700;
+    color: var(--primary-brown);
+    margin: 10px 0;
+  }
+  
+  .rating {
+    color: gold;
+    margin-bottom: 15px;
+  }
+  
+  /* Testimonials */
+  .testimonials {
+    padding: 80px 0;
+    text-align: center;
+  }
+  
+  .testimonial-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .testimonial {
+    min-width: 300px;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    scroll-snap-align: start;
+  }
+  
+  .testimonial-text {
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-author {
+    font-weight: 700;
+  }
+  
+
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Form Styles */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  textarea {
+    min-height: 100px;
+  }
+  
+  /* Blog Styles */
+  .blog-post {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+
+  }
+  .blog-post img{
+    width: 400px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .blog-post h3 {
+    margin-top: 0;
+  }
+  
+
+  .blog{
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+   
+ 
+    
+    
+   
+   
+  
+   }
+   
+  .blog-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+  
+  footer{
+    background-color: white;
+    color: black;
+    width:100%;
+    height:100%;
+    text-align: center;
+
+  }
+
+
+
+
+
+
+
+
+
+
+  
+  /* Tablet View */
+@media (max-width: 992px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Mobile View */
+  @media (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+    
+    nav ul.show {
+      display: flex;
+    }
+    
+    .mobile-menu {
+      display: block;
+    }
+    
+    .hero {
+      padding: 60px 0;
+    }
+    
+    .hero h1 {
+      font-size: 1.8rem;
+    }
+    
+    .testimonial {
+      min-width: 250px;
+    }
+  }

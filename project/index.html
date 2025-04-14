@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tricia's Hairline - Premium Human Hair Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+        <img src="images/tricia-logo.jpg" alt="Tricia's Hairline Logo" class="logo-img">
+      <a href="index.html" class="logo">TRICIA'S HAIRLINE</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="premium">
+        <h1>Premium Human Hair, Delivered to You</h1>
+        <a href="shop.html" class="btn">Shop Collection</a>
+      </div>
+    </section>
+
+    <section class="featured">
+      <div class="sellers">   
+        <h2>Our Best Sellers</h2>
+        <div class="product-grid" id="featured-products">
+          <!-- Products loaded via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="clients">
+        <h2>See What Our Clients Say</h2>
+        <div class="testimonial-carousel">
+          <!-- Testimonials loaded via JavaScript -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="hairline">
+      <p> &copy; <span id="copyright-year"> </span> Tricia's Hairline  - Ibadan Oyo State Nigeria. <br>last modified: 
+        <span id="last-modified"> </span> </p>
+      <div class="social-icons">
+        <a href="#"><img src="images/instagram.jpeg" alt="Instagram"></a>
+        <a href="#"><img src="images/email.jpeg" alt="Email"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/cart.js"></script>
+</body>
+</html>
