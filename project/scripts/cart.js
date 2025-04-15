@@ -79,3 +79,81 @@ document.addEventListener('click', (e) => {
     addToCart(productId);
   }
 });
+
+// Display cart items
+function renderCart() {
+    const cartItemsEl = document.getElementById('cart-items');
+    const subtotalEl = document.getElementById('subtotal');
+    const totalEl = document.getElementById('total');
+    
+    if (cart.length === 0) {
+        cartItemsEl.innerHTML = `
+            <div class="empty-cart">
+                <p>Your cart is empty</p>
+                <a href="shop.html" class="btn">Continue Shopping</a>
+            </div>
+        `;
+        subtotalEl.textContent = '₦0.00';
+        totalEl.textContent = '₦2,500.00';
+        return;
+    }
+
+    let subtotal = 0;
+    cartItemsEl.innerHTML = cart.map(item => {
+        subtotal += item.price * item.quantity;
+        return `
+            <div class="cart-item" data-id="${item.id}">
+                <img src="${item.image}" alt="${item.name}">
+                <div class="cart-item-details">
+                    <h4 class="cart-item-title">${item.name}</h4>
+                    <p class="cart-item-price">₦${(item.price * item.quantity).toLocaleString()}</p>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" data-action="decrease">-</button>
+                        <span>${item.quantity}</span>
+                        <button class="quantity-btn" data-action="increase">+</button>
+                    </div>
+                </div>
+                <button class="cart-item-remove">×</button>
+            </div>
+        `;
+    }).join('');
+
+    subtotalEl.textContent = `₦${subtotal.toLocaleString()}`;
+    totalEl.textContent = `₦${(subtotal + 2500).toLocaleString()}`;
+}
+
+// Initialize cart page
+document.addEventListener('DOMContentLoaded', () => {
+    renderCart();
+    updateCartCount();
+    
+    // Event delegation for cart controls
+    document.addEventListener('click', (e) => {
+        const cartItem = e.target.closest('.cart-item');
+        if (!cartItem) return;
+        
+        const productId = parseInt(cartItem.dataset.id);
+        
+        // Remove button
+        if (e.target.classList.contains('cart-item-remove')) {
+            removeFromCart(productId);
+            renderCart();
+        }
+        
+        // Quantity buttons
+        if (e.target.classList.contains('quantity-btn')) {
+            const action = e.target.dataset.action;
+            const quantityEl = cartItem.querySelector('.quantity-controls span');
+            let quantity = parseInt(quantityEl.textContent);
+            
+            if (action === 'increase') {
+                quantity++;
+            } else if (action === 'decrease' && quantity > 1) {
+                quantity--;
+            }
+            
+            updateQuantity(productId, quantity);
+            renderCart();
+        }
+    });
+});

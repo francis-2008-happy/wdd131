@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | Tricia's Hairline</title>
+    <link rel="stylesheet" href="styles/style.css"> <!-- Your existing CSS -->
+</head>
+<body>
+    <header>
+        <div class="container">
+          <img src="images/tricia-logo.jpg" alt="Tricia's Hairline Logo" class="logo-img">
+          <a href="index.html" class="logo">TRICIA'S HAIRLINE</a>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html" class="active">Shop</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="cart.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+          </nav>
+          <button class="mobile-menu">☰</button>
+        </div>
+      </header>
+
+    <section class="cart-section">
+        <h1>Your Shopping Cart</h1>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be dynamically inserted here -->
+            <div class="empty-cart">
+                <p>Your cart is empty</p>
+                <a href="shop.html" class="btn">Continue Shopping</a>
+            </div>
+        </div>
+
+        <div class="cart-summary">
+            <h3>Order Summary</h3>
+            <div class="summary-row">
+                <span>Subtotal:</span>
+                <span id="subtotal">₦0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Shipping:</span>
+                <span id="shipping">₦2,500.00</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total:</span>
+                <span id="total">₦2,500.00</span>
+            </div>
+            <button class="btn checkout-btn">Proceed to Checkout</button>
+        </div>
+    </section>
+    <div class="hairline">
+        <p> &copy; <span id="copyright-year"> </span> Tricia's Hairline  - Ibadan Oyo State Nigeria. <br>last modified: 
+          <span id="last-modified"> </span> </p>
+        <div class="social-icons">
+          <a href="#"><img src="images/instagram.jpeg" alt="Instagram"></a>
+          <a href="#"><img src="images/email.jpeg" alt="Email"></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/cart.js"></script> <!-- New cart functionality -->
+</body>
+</html>
